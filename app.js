@@ -135,41 +135,41 @@ for (var i = 0; i < 3; i++) {
 			//safe 2
 			if (i.data.global.x > 125 && i.data.global.x < 275) {
 				
-				doors[1].alpha = 0;
-				shadows[1].alpha = 0;
-				locks[1].alpha = 0;
+				TweenMax.to(doors[1], 0.75, {alpha:0});
+				TweenMax.to(shadows[1], 0.75, {alpha:0});
+				TweenMax.to(locks[1], 0.75, {alpha:0});
 
 				safe2Clicked = true;
 
 				if (safe1Clicked == true && safe2Clicked == true && safe3Clicked == true) {
 					setPrize(1);
-					TweenMax.to(safes[1].scale, 0.5, {x:1.1, y:1.1, yoyo:true, repeat:1});
+					//TweenMax.to(safes[1].scale, 0.5, {x:1.1, y:1.1, yoyo:true, repeat:1, delay:2});
 				}
 			//safe 3	
 			} else if (i.data.global.x > 332 && i.data.global.x < 469) {
 				
-				doors[2].alpha = 0;
-				shadows[2].alpha = 0;
-				locks[2].alpha = 0;
+				TweenMax.to(doors[2], 0.75, {alpha:0});
+				TweenMax.to(shadows[2], 0.75, {alpha:0});
+				TweenMax.to(locks[2], 0.75, {alpha:0});
 
 				safe3Clicked = true;
 
 				if (safe1Clicked == true && safe2Clicked == true && safe3Clicked == true) {
 					setPrize(2);
-					TweenMax.to(safes[2].scale, 0.5, {x:1.1, y:1.1, yoyo:true, repeat:1});
+					//TweenMax.to(safes[2].scale, 0.5, {x:1.1, y:1.1, yoyo:true, repeat:1});
 				}
 			//safe 1
 			} else {
-				
-				doors[0].alpha = 0;
-				shadows[0].alpha = 0;
-				locks[0].alpha = 0;
+
+				TweenMax.to(doors[0], 0.75, {alpha:0});
+				TweenMax.to(shadows[0], 0.75, {alpha:0});
+				TweenMax.to(locks[0], 0.75, {alpha:0});
 
 				safe1Clicked = true;
 
 				if (safe1Clicked == true && safe2Clicked == true && safe3Clicked == true) {
 					setPrize(3);
-					TweenMax.to(safes[0].scale, 0.5, {x:1.1, y:1.1, yoyo:true, repeat:1});
+					//TweenMax.to(safes[0].scale, 0.5, {x:1.1, y:1.1, yoyo:true, repeat:1});
 				}
 			}
 		}
@@ -184,9 +184,8 @@ for (var i = 0; i < 3; i++) {
 
 			prizeText.anchor.set(0.5);
 			//win prize animation
-			//TweenMax.to(prizeText, 1, {y:150, yoyo:true, repeat:1});
-			TweenMax.to(prizeText.scale, 0.5, {x:1.5, y:1.5, yoyo:true, repeat:3});
-			//TweenMax.to(win.scale, 0.5, {x:1.5, y:1.5, yoyo:true, repeat:1});
+			//TweenMax.to(prizeText, 1, {y:150, yoyo:true, repeat:1});;
+			TweenMax.to(prizeText.scale, 0.5, {x:1.5, y:1.5, yoyo:true, repeat:3, delay:2});
 
 			setTimeout(function(){
 				win.alpha = 0;
@@ -206,7 +205,7 @@ for (var i = 0; i < 3; i++) {
 					location.reload();
 				});
 				
-			}, 3000);
+			}, 5000);
 
 		}
 
