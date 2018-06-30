@@ -132,6 +132,7 @@ for (var i = 0; i < 3; i++) {
 		if(!(safe1Clicked == true && safe2Clicked == true && safe3Clicked == true)){
 			//if x value lies between certain ranges then we can clear the shadow and lock as well as the door
 			//console.log(i.data.global.x);
+			//safe 2
 			if (i.data.global.x > 125 && i.data.global.x < 275) {
 				
 				doors[1].alpha = 0;
@@ -144,7 +145,7 @@ for (var i = 0; i < 3; i++) {
 					setPrize(1);
 					TweenMax.to(safes[1].scale, 0.5, {x:1.1, y:1.1, yoyo:true, repeat:1});
 				}
-
+			//safe 3	
 			} else if (i.data.global.x > 332 && i.data.global.x < 469) {
 				
 				doors[2].alpha = 0;
@@ -157,7 +158,7 @@ for (var i = 0; i < 3; i++) {
 					setPrize(2);
 					TweenMax.to(safes[2].scale, 0.5, {x:1.1, y:1.1, yoyo:true, repeat:1});
 				}
-
+			//safe 1
 			} else {
 				
 				doors[0].alpha = 0;
