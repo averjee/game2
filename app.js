@@ -135,7 +135,7 @@ for (var i = 0; i < 3; i++) {
 			//safe 2
 			if (i.data.global.x > 125 && i.data.global.x < 275) {
 				
-				TweenMax.to(doors[1], 0.75, {alpha:0});
+				TweenMax.to(doors[1], 0.75, {alpha:0, delay:0.75});
 				TweenMax.to(shadows[1], 0.75, {alpha:0});
 				TweenMax.to(locks[1], 0.75, {alpha:0});
 
@@ -148,7 +148,7 @@ for (var i = 0; i < 3; i++) {
 			//safe 3	
 			} else if (i.data.global.x > 332 && i.data.global.x < 469) {
 				
-				TweenMax.to(doors[2], 0.75, {alpha:0});
+				TweenMax.to(doors[2], 0.75, {alpha:0, delay:0.75});
 				TweenMax.to(shadows[2], 0.75, {alpha:0});
 				TweenMax.to(locks[2], 0.75, {alpha:0});
 
@@ -161,7 +161,7 @@ for (var i = 0; i < 3; i++) {
 			//safe 1
 			} else {
 
-				TweenMax.to(doors[0], 0.75, {alpha:0});
+				TweenMax.to(doors[0], 0.75, {alpha:0, delay:0.75});
 				TweenMax.to(shadows[0], 0.75, {alpha:0});
 				TweenMax.to(locks[0], 0.75, {alpha:0});
 
@@ -178,14 +178,16 @@ for (var i = 0; i < 3; i++) {
 
 			prizeText.x = 200 * n;
 			prizeText.y = 290;
-			prizeText.alpha = 1;
+			//prizeText.alpha = 1;
 			pickText.alpha = 0;
-			win.alpha = 1;
+			//win.alpha = 1;
 
 			prizeText.anchor.set(0.5);
 			//win prize animation
-			//TweenMax.to(prizeText, 1, {y:150, yoyo:true, repeat:1});;
-			TweenMax.to(prizeText.scale, 0.5, {x:1.5, y:1.5, yoyo:true, repeat:3, delay:1});
+			//TweenMax.to(prizeText, 1, {y:150, yoyo:true, repeat:1});
+			TweenMax.to(prizeText, 0.75, {alpha:1, delay:0.75});
+			TweenMax.to(win, 0.75, {alpha:1, delay:0.75});
+			TweenMax.to(prizeText.scale, 0.5, {x:1.5, y:1.5, yoyo:true, repeat:3, delay:1.75});
 
 			setTimeout(function(){
 				win.alpha = 0;
