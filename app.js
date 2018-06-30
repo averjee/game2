@@ -185,7 +185,7 @@ for (var i = 0; i < 3; i++) {
 			prizeText.anchor.set(0.5);
 			//win prize animation
 			//TweenMax.to(prizeText, 1, {y:150, yoyo:true, repeat:1});;
-			TweenMax.to(prizeText.scale, 0.5, {x:1.5, y:1.5, yoyo:true, repeat:3, delay:2});
+			TweenMax.to(prizeText.scale, 0.5, {x:1.5, y:1.5, yoyo:true, repeat:3, delay:1});
 
 			setTimeout(function(){
 				win.alpha = 0;
