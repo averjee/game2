@@ -184,10 +184,10 @@ for (var i = 0; i < 3; i++) {
 
 			prizeText.anchor.set(0.5);
 			//win prize animation
-			//TweenMax.to(prizeText, 1, {y:150, yoyo:true, repeat:1});
 			TweenMax.to(prizeText, 0.75, {alpha:1, delay:0.75});
+			TweenMax.to(prizeText, 1, {y:150, yoyo:true, repeat:1, delay:1.75});
+			TweenMax.to(prizeText.scale, 0.5, {x:1.5, y:1.5, yoyo:true, repeat:3, delay:4});
 			TweenMax.to(win, 0.75, {alpha:1, delay:0.75});
-			TweenMax.to(prizeText.scale, 0.5, {x:1.5, y:1.5, yoyo:true, repeat:3, delay:1.75});
 
 			setTimeout(function(){
 				win.alpha = 0;
@@ -207,7 +207,7 @@ for (var i = 0; i < 3; i++) {
 					location.reload();
 				});
 				
-			}, 5000);
+			}, 6000);
 
 		}
 
